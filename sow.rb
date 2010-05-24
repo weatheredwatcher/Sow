@@ -15,6 +15,10 @@ require 'net/http'
 # Here you can define the directory structure that you want on the base level
 dir_structure = ['stylesheets','javascript','images','db']
 javascript_dir = 'javascript'
+=begin
+  TODO Need to add some code for css and maybe some automatic image stuff
+=end
+
 
 # This makes sure that a variable has been passed
 if ARGV.length == 0
