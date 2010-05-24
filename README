@@ -1,0 +1,17 @@
+A simple Ruby script that Creates a basic Project Structure
+
+CHANGE LOG:
+
+5/14/2010
+
+Added code to download three js libraries and also create a index.html file with the XHTML Strict Doctype.
+
+5/4/2010
+
+Created the script, got the directory structure up and running
+
+
+
+Configuration:
+
+Configuration of this script is simple.  The #OPTIONS block lets you define an array for the directory structure as well as define specific variables for other directories that might get called from the script. (i.e. the javascript directory is defined here for downloading the script files to)
