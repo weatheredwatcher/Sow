@@ -15,9 +15,9 @@ require 'net/http'
 # Here you can define the directory structure that you want on the base level
 dir_structure = ['stylesheets','javascript','images','db']
 javascript_dir = 'javascript'
-=begin
-  TODO Need to add some code for css and maybe some automatic image stuff
-=end
+
+#TODO Need to add some code for css and maybe some automatic image stuff
+css_dir = 'stylesheets'
 
 
 # This makes sure that a variable has been passed
@@ -33,7 +33,7 @@ puts "#{project}:CREATED"
 FileUtils.cd project
 # Creates a XHTML Strict Doctype Index file
 File.open("index.html", 'w') {|file|
-file.puts "<!DOCTYPE html>
+file.puts "<!DOCTYPE html>"
 file.puts "<html>"
 file.puts " <head>"
 file.puts "   <title></title>"
@@ -52,7 +52,11 @@ dir_structure.each do |i|
   FileUtils.mkdir_p i
   puts "#{i}:CREATED"
 end
-
+#Here we load the base CSS file
+File.open("stylesheets/style.css", 'w'){ |file|
+file.puts "# Insert style Here"
+}
+puts "style.css.....done"
 #this is where we load the JavaScript Libraries into the JavaScript folder
 FileUtils.cd javascript_dir
 Net::HTTP.start("script.aculo.us") { |http|
