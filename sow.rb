@@ -33,15 +33,14 @@ puts "#{project}:CREATED"
 FileUtils.cd project
 # Creates a XHTML Strict Doctype Index file
 File.open("index.html", 'w') {|file|
-file.puts "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\""
-file.puts "	\"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">"
+file.puts "<!DOCTYPE html>
 file.puts "<html>"
-file.puts "	<head>"
-file.puts "		<title></title>"
-file.puts "	</head>"
-file.puts "	<body>"
-file.puts "	"
-file.puts "	</body>"
+file.puts " <head>"
+file.puts "   <title></title>"
+file.puts " </head>"
+file.puts " <body>"
+file.puts " "
+file.puts " </body>"
 file.puts "</html>"}
 puts "index.html........done"
 
@@ -65,7 +64,7 @@ Net::HTTP.start("script.aculo.us") { |http|
 puts "Prototype.........Downloaded"
 puts "Scriptaculous.....Downloaded"
 =begin
-  TODO Need to add some code to extract the prototype/scriptaculous libraries 
+  TODO Need to add some code to extract the prototype/scriptaculous libraries
 =end
 Net::HTTP.start("code.jquery.com") { |http|
   resp = http.get("/jquery-1.4.2.js")
